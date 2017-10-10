@@ -17,6 +17,7 @@ int main()
 	int bytes_sent = 0;
 	char buffer[PIPE_BUF + 1];
 
+	printf("PIPE_BUF size = %d\n",PIPE_BUF);
 	if(access(fifo_name, F_OK) == -1)
 	{
 		//管道文件不存在
