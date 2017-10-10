@@ -15,7 +15,7 @@ int main(void)
     pid_t pid;
     char buf[1024];
     int fd[2];
-    char *p = "test for pipe\n";
+    char *p = "test for pipe,haha\n";
     
    if (pipe(fd) == -1) 
        sys_err("pipe");
@@ -23,16 +23,16 @@ int main(void)
    pid = fork();
    if (pid < 0) {
        sys_err("fork err");
-   } else if (pid == 0) {
-        close(fd[1]);
-        int len = read(fd[0], buf, sizeof(buf));
-        write(STDOUT_FILENO, buf, len);
-        close(fd[0]);
-   } else {
+   } else if (pid == 0){
        close(fd[0]);
        write(fd[1], p, strlen(p));
        wait(NULL);
        close(fd[1]);
+   } else {
+      close(fd[1]);
+      int len = read(fd[0], buf, sizeof(buf));
+      write(STDOUT_FILENO, buf, len);
+      close(fd[0]);
    }
     
     return 0;

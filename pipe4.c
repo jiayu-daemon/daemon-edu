@@ -25,7 +25,7 @@ int main(void)
 		}
 	}
 
-	if (i == 0) {			
+	if (i == 0) {
 		close(fd[0]);				
 		write(fd[1], "1.hello\n", strlen("1.hello\n"));
 	}
