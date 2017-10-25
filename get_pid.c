@@ -7,7 +7,7 @@ int main(void)
     pid_t pid;  
     printf("Before fork ...\n");  
 
-    switch(pid = fork()) {  
+    switch(pid = fork()) {
         case -1:  
             printf("Fock call fail\n");  
             exit(1);  
