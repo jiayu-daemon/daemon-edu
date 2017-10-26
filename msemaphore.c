@@ -7,6 +7,7 @@
 #include <string.h>
 #include <sys/sem.h>
 
+
 union semun
 {
     int val;
@@ -38,10 +39,11 @@ int main(int argc, char *argv[])
         }
         /* 设置要输出到屏幕中的信息，即其参数的第一个字符 */
         message = argv[1][0];
+        printf(" argv[1][0] = %c\n",message);
         sleep(2);
     }
 
-    for(i = 0; i < 10; ++i)
+    for(i = 0; i < 5; ++i)
     {
         /* 进入临界区 */
         if(!semaphore_p()){
@@ -62,7 +64,7 @@ int main(int argc, char *argv[])
         }
         sleep(rand() % 2);
     }
-    sleep(10);
+    sleep(3);
     printf("\n%d - finished\n", getpid());
 
     if(argc > 1)
