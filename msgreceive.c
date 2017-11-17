@@ -17,7 +17,7 @@ int main(int argc, char * argv[])
 	int msgid = -1;
 	struct msg_st data;
 	long int msgtype = 0; //注意1
-
+	
 	//建立消息队列
 	msgid = msgget((key_t)1234, 0666 | IPC_CREAT);
 	if(msgid == -1)

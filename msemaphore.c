@@ -21,7 +21,6 @@ static void del_semvalue();
 static int semaphore_p();
 static int semaphore_v();
 
-
 int main(int argc, char *argv[])
 {
     char message = 'X';

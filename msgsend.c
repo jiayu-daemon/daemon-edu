@@ -13,6 +13,8 @@ struct msg_st
     char text[MAX_TEXT];
 };
 
+
+
 int main(int argc, char * argv[])
 {
     int running = 1;
