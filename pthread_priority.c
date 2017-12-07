@@ -7,7 +7,7 @@
 
 
 void * thr_fun(void *arg)  
-{  
+{
     int policy, ret;  
     struct sched_param param;  
     //获取线程调度参数  
@@ -35,7 +35,7 @@ void * thr_fun(void *arg)
         i++;  
         i *= 2;  
     }  
-    pthread_exit(NULL);   
+    pthread_exit(NULL);
 }
 
 
@@ -52,7 +52,7 @@ int main(void)
     pthread_attr_init(&attr);  
     //获取继承的调度策略  
     ret = pthread_attr_getinheritsched(&attr, &inher);  
-    if (ret!=0)  
+    if (ret!=0)
     {  
         printf("pthread_attr_getinheritsched/n%s/n", strerror(ret));  
         exit(1);  
@@ -105,4 +105,4 @@ int main(void)
     }
     pthread_join(tid, NULL);  
     pthread_exit(NULL);  
-} 
+}

@@ -52,7 +52,8 @@ static void api_set_thread_policy (pthread_attr_t *attr,int policy)
     assert (rs == 0);
     api_get_thread_policy (attr);
 }
-    
+
+
 int main(void)
 {
     pthread_attr_t attr;       // 线程属性
