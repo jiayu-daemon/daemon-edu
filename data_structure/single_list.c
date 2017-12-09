@@ -58,6 +58,7 @@ void insert_sort_l2b(node * p)
 	return;
 }
 
+
 void traverse()
 {
 	node *p = head;
@@ -68,6 +69,7 @@ void traverse()
 	}
 	printf("\n");
 }
+
 
 
 node * find(int item)
@@ -83,6 +85,7 @@ node * find(int item)
 	}
 	return NULL;
 }
+
 
 
 int delete_node(node * p)
@@ -106,7 +109,6 @@ int delete_node(node * p)
 
 	return 0;
 }
-
 
 
 void destroy()
