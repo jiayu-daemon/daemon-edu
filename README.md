@@ -32,7 +32,7 @@ linux系统中的线程间通信方式主要以下几种:
  
 线程间的通信目的主要是用于线程同步，所以线程没有像进程通信中的用于数据交换的通信机制
 
-欢迎关注作者公众号
+欢迎关注作者微信公众号《爬行极客》
 
 
 ![image](https://github.com/jiayu-daemon/daemon-edu/blob/master/author/qrcode_for_gh_1b7403ac5bb0_344.jpg)
